@@ -17,7 +17,7 @@ SQL CLR is technology for hosting of the Microsoft .NET common language runtime 
  - Code that runs within the CLR is referred to as managed code. 
  - SQL CLR allows managed code to be hosted by, and run in the Microsoft SQL Server environment.
 
-### Types
+### CLR Object Types
 
 SQL CLR allows the following types of managed code objects in SQL Server in .NET languages (C# or VB.NET).
 
