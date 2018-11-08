@@ -21,7 +21,7 @@ The easiest way to create a CLR scalar-valued function, select **Project > Add N
 
 <img src="https://raw.githubusercontent.com/zzzprojects/sqlclr-tutorial/master/docs/images/clr-udf1.png">
 
-This is a very simple function which returns a string message. 
+Select the **SQL CLR C#** from the list on the left pane, and choose **SQL CLR C# User Defined Function** in the middle pane. Let's add the following simple function which returns a string message. 
 
 ```csharp
 public partial class UserDefinedFunctions
@@ -41,6 +41,7 @@ CREATE FUNCTION dbo.ScalarUDF( )
 RETURNS NVARCHAR (MAX)
 AS EXTERNAL NAME SqlClrDemo.UserDefinedFunctions.ScalarUDF
 ```
+
 ### CLR Table-Valued Functions
 
 A table-valued function is a user-defined function that returns a table. SQL Server extends the functionality of table-valued functions by allowing you to define a table-valued function in any managed language. 
