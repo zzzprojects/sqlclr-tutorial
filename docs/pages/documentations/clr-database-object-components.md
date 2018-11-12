@@ -12,7 +12,7 @@ After the coding for the CLR object has been completed, you can use the T-SQL to
 
 ```csharp
 CREATE ASSEMBLY SqlDbCLRDemo 
-FROM 'C:\SqlDbCLRDemo.dll' 
+FROM 'C:\SqlCLRDemo.dll' 
 WITH PERMISSION_SET = SAFE
 GO
 ```
@@ -21,7 +21,7 @@ Once the SQL Server assembly is created, you can then use T-SQL to create CLR da
 
 ```csharp
 CREATE PROCEDURE usp_HelloWorld
-AS EXTERNAL NAME SqlDbCLRDemo.StoredProcedures.HelloWorld
+AS EXTERNAL NAME SqlCLRDemo.StoredProcedures.HelloWorld
 GO
 ```
 
