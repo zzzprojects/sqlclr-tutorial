@@ -1,1 +1,2 @@
-# sqlclr-tutorial
+# SQL CLR Tutorial
+SQL CLR Tutorial
