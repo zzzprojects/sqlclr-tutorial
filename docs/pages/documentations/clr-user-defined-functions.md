@@ -1,3 +1,8 @@
+---
+PermaID: 100006
+Name: CLR User-Defined Functions
+---
+
 # CLR User-Defined Functions
 
 A function is a procedure that returns a value or an object. It can take parameters, perform calculations or other actions, and return a result. 
@@ -36,7 +41,7 @@ public partial class UserDefinedFunctions
 
 The `SqlFunction` attribute is used for deployment of your SQL CLR functions. The following SQL statement will create a scalar-valued function.
 
-```csharp
+```sql
 CREATE FUNCTION dbo.ScalarUDF( )
 RETURNS NVARCHAR (MAX)
 AS EXTERNAL NAME SqlClrDemo.UserDefinedFunctions.ScalarUDF
@@ -120,7 +125,7 @@ Click on the **Database Settings...** button and check the Trustworthy option.
 
 Let's execute the following SQL.
 
-```csharp
+```sql
 SELECT * FROM 
 dbo.GetFiles('D:\Project\ZZZ\octokit.net', '*.md')
 ```

@@ -1,3 +1,8 @@
+---
+PermaID: 100008
+Name: Create CLR Database Objects
+---
+
 # Create CLR Database Objects
 
 The most productive way of creating CLR database objects is to use Visual Studio which provides tools that can help you to create CLR database objects as well as deploy and debug them.
@@ -56,7 +61,7 @@ If you are not using Visual Studio, or if you want to perform the deployment pro
 
 You can use T-SQL to execute the `CREATE ASSEMBLY` statement that references the location of the .NET DLL.
 
-```csharp
+```sql
 CREATE ASSEMBLY SqlDbCLRDemo 
 FROM 'C:\SqlCLRDemo.dll' 
 WITH PERMISSION_SET = SAFE
@@ -65,14 +70,14 @@ GO
 
 Once the Assembly is created you can use the `CREATE PROCEDURE` statement to create the stored procedure. The following example creates `PrintText` stored procedure that uses the **SqlCLRDemo** assembly.
 
-```csharp
+```sql
 CREATE PROCEDURE PrintText
 AS EXTERNAL NAME SqlClrDemo.StoredProcedures.PrintText
 ```
 
 It will produce the same result as the Publish option did. Now you can execute the this stored procedure using SQL `EXEC` statement.
 
-```csharp
+```sql
 EXEC PrintText
 ```
 

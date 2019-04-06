@@ -1,3 +1,8 @@
+---
+PermaID: 100004
+Name: CLR Triggers
+---
+
 # CLR Triggers
 
 A trigger in SQL Server terms is a piece of logic that gets executed when an action is taken against a table or a view. There are two types of triggers supported in SQL Server; 
@@ -26,7 +31,7 @@ public static void InsertAuthorTrigger ()
 
 But we don't have any `Authors` table in our database, so let's add an `Author` table to the database first using the `CREATE TABLE`.
 
-```csharp
+```sql
 CREATE TABLE [dbo].[Authors] (
     [AuthorId] INT            IDENTITY (1, 1) NOT NULL,
     [Name]     NVARCHAR (MAX) NULL,
@@ -36,7 +41,7 @@ CREATE TABLE [dbo].[Authors] (
 
 The T-SQL statement creates the trigger in SQL Server, it assumes assembly `SqlClrDemo` is already registered in the current SQL Server database.
 
-```csharp
+```sql
 CREATE TRIGGER tri_Insert_Authors
 ON Authors
 FOR INSERT
@@ -45,7 +50,7 @@ AS EXTERNAL NAME SqlClrDemo.Triggers.InsertAuthorTrigger
 
 Now to see the trigger in action, let's insert data to the `Authors` table using the following SQL.
 
-```csharp
+```sql
 INSERT Authors (Name) values ('Andy')
 ```
 

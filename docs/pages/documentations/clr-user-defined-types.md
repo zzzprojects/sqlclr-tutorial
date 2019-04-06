@@ -1,3 +1,8 @@
+---
+PermaID: 100007
+Name: CLR User-Defined Types
+---
+
 # CLR User-Defined Types
 
 The CLR User-Defined Types (UDTs) extend the scalar type system and enabling storage of CLR objects in a SQL Server database, and provide the ability to define complex structured types.
@@ -161,14 +166,14 @@ public struct Point3D: INullable
 
 To create the CLR user-defined type in the database, you can use Visual Studio Publish option or execute the following T-SQL.
 
-```csharp
+```sql
 CREATE TYPE [dbo].[Point3D]
 EXTERNAL NAME [SqlClrDemo].[Point3D]
 ```
 
 Let's test the user-defined type by running the following T-SQL
 
-```csharp
+```sql
 DECLARE @point AS [dbo].[Point3D]
 SET @point = '10,5,0';
 PRINT @point.ToString();

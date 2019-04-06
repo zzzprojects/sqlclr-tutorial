@@ -1,3 +1,8 @@
+---
+PermaID: 100001
+Name: CLR Database Object Components
+---
+
 # CLR Database Object Components
 
 To create .NET database objects, you write managed code in any one of the .NET languages (VB, C#, or Managed C++), and compile it into a .NET DLL. 
@@ -10,7 +15,7 @@ To create .NET database objects, you write managed code in any one of the .NET l
 
 After the coding for the CLR object has been completed, you can use the T-SQL to create a SQL Server assembly
 
-```csharp
+```sql
 CREATE ASSEMBLY SqlDbCLRDemo 
 FROM 'C:\SqlCLRDemo.dll' 
 WITH PERMISSION_SET = SAFE
@@ -19,7 +24,7 @@ GO
 
 Once the SQL Server assembly is created, you can then use T-SQL to create CLR database objects.
 
-```csharp
+```sql
 CREATE PROCEDURE usp_HelloWorld
 AS EXTERNAL NAME SqlCLRDemo.StoredProcedures.HelloWorld
 GO

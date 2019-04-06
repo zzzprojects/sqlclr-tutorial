@@ -1,3 +1,8 @@
+---
+PermaID: 100005
+Name: CLR User-defined Aggregates
+---
+
 # CLR User-defined Aggregates
 
 Aggregate functions perform a calculation on a set of values and return a single value. T-SQL has a number of built-in aggregates, such as SUM, AVG, and MAX, etc. 
@@ -109,7 +114,7 @@ public struct MaxVariance
 
 The MaxVariance aggregate calculate the difference between high and low values on any column. Let's build the application and Publish it or use the following T-SQL to register this aggregate.
 
-```csharp
+```sql
 CREATE AGGREGATE [dbo].[MaxVariance](@value INT NULL)
 RETURNS INT
 EXTERNAL NAME [SqlClrDemo].[MaxVariance];
@@ -122,7 +127,7 @@ To test the custom aggregate function, we have an `Employees` table which contai
 
 Now use the `MaxVariance` aggregate in the following T-SQL.
 
-```csharp
+```sql
 SELECT dbo.MaxVariance(Salary) As MaxVariance
 FROM Employees
 ```

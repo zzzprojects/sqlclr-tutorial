@@ -1,3 +1,8 @@
+---
+PermaID: 100003
+Name: CLR Stored Procedures
+---
+
 # CLR Stored Procedures
 
 CLR is Common Language Runtime, and Stored Procedures are routine stored procedures of the database. Thus, CLR Stored Procedures are a combination of both.
@@ -31,7 +36,7 @@ public static void PrintText()
 
 The `CREATE PROCEDURE` statement will create the stored procedure using the **SqlCLRDemo** assembly.
 
-```csharp
+```sql
 CREATE PROCEDURE PrintText
 AS EXTERNAL NAME SqlClrDemo.StoredProcedures.PrintText
 ```
@@ -50,7 +55,7 @@ public static void PrintTextByPassingParams(string strInParam, out string strOut
 
 The following `CREATE PROCEDURE` statement will create the `PrintTextByPassingParams` stored procedure which takes two parameters.
 
-```csharp
+```sql
 CREATE PROCEDURE dbo.PrintTextByPassingParams
     (
      @strInParam NVARCHAR (MAX) NULL,
@@ -61,7 +66,7 @@ AS EXTERNAL NAME SqlClrDemo.StoredProcedures.PrintTextByPassingParams
 
 You can also use the **Publish** option to create the stored procedure automatically. The following example will execute `PrintTextByPassingParams`.
 
-```csharp
+```sql
 DECLARE @message nvarchar(max)
 EXEC dbo.PrintTextByPassingParams @strInParam = 'Andy', @strOutParam = @message OUTPUT;
 

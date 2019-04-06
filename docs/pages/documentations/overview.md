@@ -1,3 +1,9 @@
+---
+PermaID: 100000
+Name: Overview
+IsHome: 1
+---
+
 # Overview
 
 ## What is CLR?
@@ -33,7 +39,7 @@ The managed code compiles to native code before execution; you can achieve signi
 
 By default, the CLR support in the SQL Server database engine is disabled. To enable CLR support, you need to set the `clr enabled` option of `sp_configure` system stored procedure to 1.
 
-```csharp
+```sql
 sp_configure 'clr enabled', 1
 GO
 RECONFIGURE

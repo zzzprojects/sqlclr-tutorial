@@ -1,3 +1,8 @@
+---
+PermaID: 100002
+Name: CLR Debugging
+---
+
 # CLR Debugging
 
 SQL Server provides support for debugging CLR objects in the database. Debugging in SQL Server follows a per-connection model. A debugger can detect and debug activities only to the client connection to which it is attached. 
@@ -7,7 +12,7 @@ SQL Server provides support for debugging CLR objects in the database. Debugging
 
 To debug CLR objects in Visual Studio, let's add **TestScripts** folder and then add **Test.sql** which is going to be the default test script source file. 
 
-```csharp
+```sql
 SELECT dbo.MaxVariance(Salary) As MaxVariance
 FROM Employees
 ```
