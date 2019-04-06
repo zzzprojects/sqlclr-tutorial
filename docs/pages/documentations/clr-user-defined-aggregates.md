@@ -1,4 +1,4 @@
-# CLR Aggregates
+# CLR User-defined Aggregates
 
 Aggregate functions perform a calculation on a set of values and return a single value. T-SQL has a number of built-in aggregates, such as SUM, AVG, and MAX, etc. 
 
