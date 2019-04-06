@@ -1,7 +1,6 @@
 - [Overview](https://github.com/zzzprojects/sqlclr-tutorial/blob/master/docs/pages/documentations/overview.md)
 - [Database Object Components](https://github.com/zzzprojects/sqlclr-tutorial/blob/master/docs/pages/documentations/clr-database-object-components.md)
 - [CLR Database Objects](https://github.com/zzzprojects/sqlclr-tutorial/blob/master/docs/pages/documentations/create-clr-database-objects.md)
-
 - CLR Object Types
    - [Stored Procedures](https://github.com/zzzprojects/sqlclr-tutorial/blob/master/docs/pages/documentations/clr-stored-procedures.md)
    - [Triggers](https://github.com/zzzprojects/sqlclr-tutorial/blob/master/docs/pages/documentations/clr-triggers.md)
